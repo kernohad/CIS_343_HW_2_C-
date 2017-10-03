@@ -4,7 +4,7 @@
 *	Created by: Dylan Kernohan on 10/2/2017
 **********************************************************/
 
-#include <tring>
+#include <string>
 #include <vector>
 
 class Concert

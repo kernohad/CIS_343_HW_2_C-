@@ -5,7 +5,8 @@
 **********************************************************/
 
 #include <Concert.h>
-
+#include <string>
+#include <vector>
 
 /***************************
 *	Default Constructor
