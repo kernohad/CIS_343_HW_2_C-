@@ -4,16 +4,21 @@
 *	Created by: Dylan Kernohan on 10/2/2017
 **********************************************************/
 
-#include <Concert.h>
+#include "Concert.h"
 #include <string>
 #include <vector>
+#include <cstdlib>
 
 /***************************
 *	Default Constructor
 ***************************/
 Concert::Concert(){
-
-
+	concertName = "";
+	friends.clear();
+	desire = -1;
+	date.tm_year = 2099;
+	date.tm_mon = 1;
+	date.tm_mday = 1;
 }
 
 
@@ -36,4 +41,48 @@ Concert::~Concert(){
 
 
 
+}
+
+
+
+/***************************
+*	< Operator Overload
+***************************/
+bool Concert::operator<(const Concert& other) const{
+
+	return true;
+
+}
+
+
+/***************************
+*	Getters
+***************************/
+std::string Concert::getConcertName(){
+	return concertName;
+}
+
+std::vector<std::string> Concert::getFriends(){
+	return friends;
+}
+
+int Concert::getDesire(){
+	return desire;
+}
+
+std::tm Concert::getDate(){
+	return date;
+}
+
+
+/***************************
+*	Main
+***************************/
+int main(int argc, char* argv[]){
+	std::tm tempdate;
+	tempdate.tm_year = 1999;
+	tempdate.tm_mon = 1;
+	tempdate.tm_mday = 1;
+	std::vector<std::string> sample {"dylan", "ryan", "keith"};
+	auto concert_1 = new Concert("bobb", sample, 4, tempdate);
 }

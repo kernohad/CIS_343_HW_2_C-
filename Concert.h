@@ -6,6 +6,7 @@
 
 #include <string>
 #include <vector>
+#include <ctime>
 
 class Concert
 {
@@ -29,6 +30,21 @@ class Concert
 		~Concert();
 
 
+		/***************************
+		*	< Operator Overload
+		***************************/
+		bool operator<(const Concert& other) const;
+
+		
+		/***************************
+		*	Getters
+		***************************/
+		std::string getConcertName();
+		std::vector<std::string> getFriends();
+		int getDesire();
+		std::tm getDate();
+
+
 	private:
 
 		// Who will be performing?
@@ -49,5 +65,3 @@ class Concert
 
 	
 };
-
-
