@@ -8,6 +8,8 @@
 #include <string>
 #include <vector>
 #include <cstdlib>
+#include <time.h>
+#include <iostream>
 
 /***************************
 *	Default Constructor
@@ -47,10 +49,32 @@ Concert::~Concert(){
 
 /***************************
 *	< Operator Overload
+*
+*	Compare a concert by date first
+*	then its desire
 ***************************/
 bool Concert::operator<(const Concert& other) const{
 
-	return true;
+	if (date.tm_year < other.date.tm_year){
+		return true;
+	}
+	else if (date.tm_year == other.date.tm_year){
+		if(date.tm_mon < other.date.tm_mon){
+			return true;
+		}
+		else if(date.tm_mon == other.date.tm_mon){
+			if(date.tm_mday < other.date.tm_mday)
+				return true;
+			else if(date.tm_mday == other.date.tm_mday){
+				if(desire > other.desire){
+					return true;
+				}
+			}
+		}
+	}
+
+
+	return false;
 
 }
 
@@ -85,4 +109,6 @@ int main(int argc, char* argv[]){
 	tempdate.tm_mday = 1;
 	std::vector<std::string> sample {"dylan", "ryan", "keith"};
 	auto concert_1 = new Concert("bobb", sample, 4, tempdate);
+
+	
 }
