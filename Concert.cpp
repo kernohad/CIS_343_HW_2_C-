@@ -247,7 +247,7 @@ int main(int argc, char* argv[]){
 	sort(concerts.begin(), concerts.begin()+10);
 
 	// Print the sorted concert vector with the overloaded << operator (Backwards so it prints most important concerts to least important concerts {Greates to Least})
-	std::cout << concerts[9] << concerts[8] << concerts[7] << concerts[6] << concerts[5] << concerts[4] << concerts[3] << concerts[2] << concerts[1] << concerts[0] << std::endl;
+	std::cout << "\nConcerts in order from most important to least important:\n\n" << concerts[9] << concerts[8] << concerts[7] << concerts[6] << concerts[5] << concerts[4] << concerts[3] << concerts[2] << concerts[1] << concerts[0] << std::endl;
 
 	
 }
