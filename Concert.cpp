@@ -2,6 +2,7 @@
 *	A file that implements the Concert.h
 *	
 *	Created by: Dylan Kernohan on 10/2/2017
+*	Collaborated With: Ryan Walt,  Keith Rodgers, Keith Schmitt
 **********************************************************/
 
 #include "Concert.h"
