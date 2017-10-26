@@ -1,5 +1,5 @@
 /***********************************************************************************************
-*	A class that holds concert info
+*	A class that holds concert info.
 *	
 *	Created by: Dylan Kernohan on 10/2/2017
 *	Collaborated With: Ryan Walt,  Keith Rodgers, Keith Schmitt
